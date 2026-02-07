@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-dotenv
+google-genai
+transformers
+huggingface-hub
+sentencepiece
+huggingface-hub
+torch
+requests

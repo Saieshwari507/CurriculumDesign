@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CurricuForge - AI Curriculum Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">📘 CurricuForge</div>
+      <ul class="nav-menu">
+        <li><button class="nav-btn active" onclick="showPage('welcome', event)">🏠 Welcome</button></li>
+        <li><button class="nav-btn" onclick="showPage('generator', event)">🎓 Generator</button></li>
+        <li><button class="nav-btn" onclick="showPage('feedback', event)">💬 Feedback</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Welcome Page -->
+  <div id="welcome" class="page active">
+    <div class="container">
+      <div class="welcome-content">
+        <h1>Welcome to CurricuForge 🚀</h1>
+        <p class="tagline">Generative AI Powered Curriculum Design System</p>
+
+        <div class="cta-section">
+          <h2>Get Started Today</h2>
+          <button class="cta-btn" onclick="showPage('generator', event)">Generate Your First Course →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course Generator Page -->
+  <div id="generator" class="page">
+    <div class="container">
+      <h1>🎓 Course Generator</h1>
+      <p class="tagline">Create structured curriculum powered by Gemini AI</p>
+
+      <div class="form-box">
+        <h2>Enter Curriculum Requirements</h2>
+
+        <label>Course Title</label>
+        <input type="text" id="courseTitle" placeholder="Example: Web Development" />
+
+        <label>Course Level</label>
+        <select id="courseLevel">
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <label>Duration (Weeks)</label>
+        <input type="number" id="duration" placeholder="Example: 8" />
+
+        <label>Target Audience</label>
+        <input type="text" id="audience" placeholder="Example: B.Tech Students" />
+
+        <label>Skills / Requirements</label>
+        <textarea id="requirements" placeholder="Example: HTML, CSS, JavaScript, React, Projects"></textarea>
+
+        <label>Course Description</label>
+        <textarea id="description" placeholder="Example: A comprehensive course on web development"></textarea>
+
+        <button type="button" onclick="generateCurriculum()" class="btn-primary">🚀 Generate Curriculum</button>
+      </div>
+
+      <div class="output-box">
+        <h2>Generated Curriculum Output</h2>
+        <pre id="outputText">Your curriculum will appear here...</pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback Page -->
+  <div id="feedback" class="page">
+    <div class="container">
+      <h1>💬 Feedback</h1>
+      <p class="tagline">Help us improve CurricuForge</p>
+
+      <div class="form-box">
+        <h2>Send Feedback</h2>
+
+        <label>Your Name</label>
+        <input type="text" id="feedbackName" placeholder="Enter your name" />
+
+        <label>Email</label>
+        <input type="email" id="feedbackEmail" placeholder="Enter your email" />
+
+        <label>Your Message</label>
+        <textarea id="feedbackMessage" placeholder="Share your thoughts..."></textarea>
+
+        <button type="button" onclick="submitFeedback()" class="btn-primary">📬 Submit Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
